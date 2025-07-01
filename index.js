@@ -12,28 +12,28 @@ let projects = [
     title: "E-commerce Website",
     description: "A full-featured online store with cart functionality",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl: "https://via.placeholder.com/600x400?text=E-commerce"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
   },
   {
     id: 2,
     title: "Task Management App",
     description: "A productivity app for managing daily tasks",
     technologies: ["React", "Firebase"],
-    imageUrl: "https://masterbundles.com/woncraft/ecommerce-logo-online-shopping-shopify-logo/"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
   },
   {
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects",
     technologies: ["React", "CSS3"],
-    imageUrl: "https://masterbundles.com/woncraft/ecommerce-logo-online-shopping-shopify-logo/"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
   },
   {
     id: 4,
     title: "Weather Application",
     description: "Real-time weather information using API",
     technologies: ["JavaScript", "API"],
-    imageUrl: "https://masterbundles.com/woncraft/ecommerce-logo-online-shopping-shopify-logo/"
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
   }
 ];
 
