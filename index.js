@@ -12,21 +12,21 @@ let projects = [
     title: "E-commerce Website",
     description: "A full-featured online store with cart functionality",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/e-commerce-logo%2Conline-store-shop-logo%2Cbag-design-template-848d51dbceb92348109f7489de7759b7_screen.jpg?ts=1738531980"
   },
   {
     id: 2,
     title: "Task Management App",
     description: "A productivity app for managing daily tasks",
     technologies: ["React", "Firebase"],
-    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/e-commerce-logo%2Conline-store-shop-logo%2Cbag-design-template-848d51dbceb92348109f7489de7759b7_screen.jpg?ts=1738531980"
   },
   {
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects",
     technologies: ["React", "CSS3"],
-    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
+    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/e-commerce-logo%2Conline-store-shop-logo%2Cbag-design-template-848d51dbceb92348109f7489de7759b7_screen.jpg?ts=1738531980"
   },
   {
     id: 4,
