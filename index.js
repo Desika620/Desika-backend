@@ -19,21 +19,21 @@ let projects = [
     title: "Task Management App",
     description: "A productivity app for managing daily tasks",
     technologies: ["React", "Firebase"],
-    imageUrl: "https://via.placeholder.com/600x400?text=Task+App"
+    imageUrl: "https://masterbundles.com/woncraft/ecommerce-logo-online-shopping-shopify-logo/"
   },
   {
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects",
     technologies: ["React", "CSS3"],
-    imageUrl: "https://via.placeholder.com/600x400?text=Portfolio"
+    imageUrl: "https://masterbundles.com/woncraft/ecommerce-logo-online-shopping-shopify-logo/"
   },
   {
     id: 4,
     title: "Weather Application",
     description: "Real-time weather information using API",
     technologies: ["JavaScript", "API"],
-    imageUrl: "https://via.placeholder.com/600x400?text=Weather+App"
+    imageUrl: "https://masterbundles.com/woncraft/ecommerce-logo-online-shopping-shopify-logo/"
   }
 ];
 
