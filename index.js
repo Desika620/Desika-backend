@@ -12,28 +12,28 @@ let projects = [
     title: "E-commerce Website",
     description: "A full-featured online store with cart functionality",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
+    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
   },
   {
     id: 2,
     title: "Task Management App",
     description: "A productivity app for managing daily tasks",
     technologies: ["React", "Firebase"],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
+    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
   },
   {
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects",
     technologies: ["React", "CSS3"],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
+    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
   },
   {
     id: 4,
     title: "Weather Application",
     description: "Real-time weather information using API",
     technologies: ["JavaScript", "API"],
-    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Joko_Widodo_2014_official_portrait.jpg/250px-Joko_Widodo_2014_official_portrait.jpg"
+    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fid.postermywall.com%2Findex.php%2Fart%2Ftemplate%2Fd8e5168c39c1d31bd2e25c51947bd26b%2Fe-commerce-logo%252Conline-store-shop-logo%252Cbag-design-template&psig=AOvVaw0QTxhoscWVqqAHhIKmJSOE&ust=1751465006000000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDx-57qm44DFQAAAAAdAAAAABAE"
   }
 ];
 
