@@ -1,9 +1,12 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 const app = express();
-const PORT = process.env.PORT || 5000;
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
 // Sample database
 let projects = [
@@ -31,6 +34,7 @@ let projects = [
 ];
 
 let messages = [];
+
 let blogPosts = [
   {
     id: 1,
@@ -50,11 +54,7 @@ let blogPosts = [
   }
 ];
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-
-// Landing page UI - PINK THEME
+// Landing page
 app.get('/', (req, res) => {
   res.send(`
     <!DOCTYPE html>
@@ -77,17 +77,14 @@ app.get('/', (req, res) => {
           text-align: center;
           padding: 20px;
         }
-
         h1 {
           font-size: 3rem;
           margin-bottom: 10px;
         }
-
         p {
           font-size: 1.2rem;
           margin-bottom: 30px;
         }
-
         .btn {
           background-color: #fff;
           color: #ff1493;
@@ -99,18 +96,15 @@ app.get('/', (req, res) => {
           transition: background 0.3s ease;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-
         .btn:hover {
           background-color: #ffe6f0;
         }
-
         footer {
           position: absolute;
           bottom: 20px;
           font-size: 0.9rem;
           color: rgba(255,255,255,0.7);
         }
-
         @media (max-width: 600px) {
           h1 {
             font-size: 2rem;
@@ -125,14 +119,13 @@ app.get('/', (req, res) => {
       <h1>🎀 Portfolio API</h1>
       <p>Welcome to the pink-themed API for projects, blogs, and messages</p>
       <a class="btn" href="/api/projects">View Projects</a>
-
       <footer>&copy; ${new Date().getFullYear()} Bagus Adi Suratno</footer>
     </body>
     </html>
   `);
 });
 
-// API Routes
+// Projects API
 app.get('/api/projects', (req, res) => {
   res.json(projects);
 });
@@ -191,21 +184,4 @@ app.post('/api/contact', (req, res) => {
   };
 
   messages.push(newMessage);
-  res.status(201).json({ message: 'Thank you for your message!', data: newMessage });
-});
-
-// Blog
-app.get('/api/blog', (req, res) => {
-  res.json(blogPosts);
-});
-
-app.get('/api/blog/:id', (req, res) => {
-  const post = blogPosts.find(p => p.id === parseInt(req.params.id));
-  if (!post) return res.status(404).json({ message: 'Post not found' });
-  res.json(post);
-});
-
-// Start server
-app.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
-});
+  res.status(201).json({ message: 'Thank you for your message!',
