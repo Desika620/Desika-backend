@@ -54,8 +54,85 @@ let blogPosts = [
 app.use(cors());
 app.use(bodyParser.json());
 
+// Landing page UI - PINK THEME
+app.get('/', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Welcome to My Portfolio API</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background: linear-gradient(135deg, #ff69b4, #ff1493);
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          text-align: center;
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 3rem;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 30px;
+        }
+
+        .btn {
+          background-color: #fff;
+          color: #ff1493;
+          padding: 12px 25px;
+          border: none;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+          background-color: #ffe6f0;
+        }
+
+        footer {
+          position: absolute;
+          bottom: 20px;
+          font-size: 0.9rem;
+          color: rgba(255,255,255,0.7);
+        }
+
+        @media (max-width: 600px) {
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <h1>🎀 Portfolio API</h1>
+      <p>Welcome to the pink-themed API for projects, blogs, and messages</p>
+      <a class="btn" href="/api/projects">View Projects</a>
+
+      <footer>&copy; ${new Date().getFullYear()} Bagus Adi Suratno</footer>
+    </body>
+    </html>
+  `);
+});
+
 // API Routes
-// Projects
 app.get('/api/projects', (req, res) => {
   res.json(projects);
 });
@@ -98,13 +175,13 @@ app.delete('/api/projects/:id', (req, res) => {
   res.json({ message: 'Project deleted' });
 });
 
-// Contact messages
+// Contact
 app.post('/api/contact', (req, res) => {
   const { name, email, message } = req.body;
   if (!name || !email || !message) {
     return res.status(400).json({ message: 'All fields are required' });
   }
-  
+
   const newMessage = {
     id: messages.length + 1,
     name,
@@ -112,12 +189,12 @@ app.post('/api/contact', (req, res) => {
     message,
     date: new Date().toISOString()
   };
-  
+
   messages.push(newMessage);
   res.status(201).json({ message: 'Thank you for your message!', data: newMessage });
 });
 
-// Blog posts
+// Blog
 app.get('/api/blog', (req, res) => {
   res.json(blogPosts);
 });
@@ -130,5 +207,5 @@ app.get('/api/blog/:id', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(Server running on port ${PORT});
 });
