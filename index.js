@@ -12,28 +12,28 @@ let projects = [
     title: "E-commerce Website",
     description: "A full-featured online store with cart functionality",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl: "https://via.placeholder.com/600x400?text=E-commerce"
+    imageUrl: "https://tinyurl.com/2yz2zt8r"
   },
   {
     id: 2,
     title: "Task Management App",
     description: "A productivity app for managing daily tasks",
     technologies: ["React", "Firebase"],
-    imageUrl: "https://via.placeholder.com/600x400?text=Task+App"
+    imageUrl: "https://tinyurl.com/2yrr7ot8"
   },
   {
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects",
     technologies: ["React", "CSS3"],
-    imageUrl: "https://via.placeholder.com/600x400?text=Portfolio"
+    imageUrl: "https://tinyurl.com/2zu86zbc"
   },
   {
     id: 4,
     title: "Weather Application",
     description: "Real-time weather information using API",
     technologies: ["JavaScript", "API"],
-    imageUrl: "https://via.placeholder.com/600x400?text=Weather+App"
+    imageUrl: "https://tinyurl.com/2zrw4kks"
   }
 ];
 
