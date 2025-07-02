@@ -38,7 +38,6 @@ let projects = [
 ];
 
 let messages = [];
-
 let blogPosts = [
   {
     id: 1,
@@ -63,7 +62,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // API Routes
-// Projects
 app.get('/api/projects', (req, res) => {
   res.json(projects);
 });
@@ -106,7 +104,7 @@ app.delete('/api/projects/:id', (req, res) => {
   res.json({ message: 'Project deleted' });
 });
 
-// Contact messages
+// Contact
 app.post('/api/contact', (req, res) => {
   const { name, email, message } = req.body;
   if (!name || !email || !message) {
@@ -125,7 +123,7 @@ app.post('/api/contact', (req, res) => {
   res.status(201).json({ message: 'Thank you for your message!', data: newMessage });
 });
 
-// Blog posts
+// Blog
 app.get('/api/blog', (req, res) => {
   res.json(blogPosts);
 });
@@ -139,11 +137,11 @@ app.get('/api/blog/:id', (req, res) => {
 // Default UI Route
 app.get('/', (req, res) => {
   const projectCards = projects.map(project => `
-    <div style="border: 1px solid #ccc; padding: 20px; margin: 10px; width: 300px;">
-      <h2>${project.title}</h2>
-      <img src="${project.imageUrl}" alt="${project.title}" style="width: 100%; height: auto;" />
-      <p><strong>Description:</strong> ${project.description}</p>
-      <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
+    <div class="card">
+      <img src="${project.imageUrl}" alt="${project.title}" />
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+      <p><strong>Tech:</strong> ${project.technologies.join(', ')}</p>
     </div>
   `).join('');
 
@@ -153,13 +151,60 @@ app.get('/', (req, res) => {
     <head>
       <title>My Projects</title>
       <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        .container { display: flex; flex-wrap: wrap; gap: 20px; }
-        h1 { color: #333; }
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          background-color: #f4f4f4;
+        }
+        h1 {
+          color: #333;
+          text-align: center;
+        }
+        .btn-container {
+          text-align: center;
+          margin: 20px 0;
+        }
+        .btn {
+          background-color: #007BFF;
+          color: white;
+          padding: 10px 20px;
+          margin: 5px;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          display: inline-block;
+        }
+        .btn:hover {
+          background-color: #0056b3;
+        }
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+        .card {
+          background: white;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          width: 300px;
+        }
+        .card img {
+          width: 100%;
+          border-radius: 5px;
+        }
       </style>
     </head>
     <body>
       <h1>Project Portfolio</h1>
+
+      <div class="btn-container">
+        <a href="/api/projects" class="btn">📁 Lihat API Projects</a>
+        <a href="/api/blog" class="btn">📰 Lihat API Blog</a>
+        <a href="/api/contact" class="btn" onclick="alert('Gunakan POST request di Postman untuk kirim kontak!'); return false;">📧 API Contact</a>
+      </div>
+
       <div class="container">
         ${projectCards}
       </div>
