@@ -12,22 +12,29 @@ let projects = [
     title: "E-commerce Website",
     description: "A full-featured online store with cart functionality",
     technologies: ["React", "Node.js", "MongoDB"],
-    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/e-commerce-logo%2Conline-store-shop-logo%2Cbag-design-template-848d51dbceb92348109f7489de7759b7_screen.jpg?ts=1738531980"
+    imageUrl: "https://via.placeholder.com/600x400?text=E-commerce"
   },
   {
     id: 2,
     title: "Task Management App",
     description: "A productivity app for managing daily tasks",
     technologies: ["React", "Firebase"],
-    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/e-commerce-logo%2Conline-store-shop-logo%2Cbag-design-template-848d51dbceb92348109f7489de7759b7_screen.jpg?ts=1738531980"
+    imageUrl: "https://via.placeholder.com/600x400?text=Task+App"
   },
   {
     id: 3,
     title: "Portfolio Website",
     description: "A personal portfolio website to showcase projects",
     technologies: ["React", "CSS3"],
-    imageUrl: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/e-commerce-logo%2Conline-store-shop-logo%2Cbag-design-template-848d51dbceb92348109f7489de7759b7_screen.jpg?ts=1738531980"
+    imageUrl: "https://via.placeholder.com/600x400?text=Portfolio"
   },
+  {
+    id: 4,
+    title: "Weather Application",
+    description: "Real-time weather information using API",
+    technologies: ["JavaScript", "API"],
+    imageUrl: "https://via.placeholder.com/600x400?text=Weather+App"
+  }
 ];
 
 let messages = [];
@@ -130,5 +137,5 @@ app.get('/api/blog/:id', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(Server running on port ${PORT});
+  console.log(`Server running on port ${PORT}`);
 });
