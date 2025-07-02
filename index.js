@@ -38,6 +38,7 @@ let projects = [
 ];
 
 let messages = [];
+
 let blogPosts = [
   {
     id: 1,
@@ -111,7 +112,7 @@ app.post('/api/contact', (req, res) => {
   if (!name || !email || !message) {
     return res.status(400).json({ message: 'All fields are required' });
   }
-  
+
   const newMessage = {
     id: messages.length + 1,
     name,
@@ -119,7 +120,7 @@ app.post('/api/contact', (req, res) => {
     message,
     date: new Date().toISOString()
   };
-  
+
   messages.push(newMessage);
   res.status(201).json({ message: 'Thank you for your message!', data: newMessage });
 });
@@ -133,6 +134,40 @@ app.get('/api/blog/:id', (req, res) => {
   const post = blogPosts.find(p => p.id === parseInt(req.params.id));
   if (!post) return res.status(404).json({ message: 'Post not found' });
   res.json(post);
+});
+
+// Default UI Route
+app.get('/', (req, res) => {
+  const projectCards = projects.map(project => `
+    <div style="border: 1px solid #ccc; padding: 20px; margin: 10px; width: 300px;">
+      <h2>${project.title}</h2>
+      <img src="${project.imageUrl}" alt="${project.title}" style="width: 100%; height: auto;" />
+      <p><strong>Description:</strong> ${project.description}</p>
+      <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
+    </div>
+  `).join('');
+
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>My Projects</title>
+      <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { display: flex; flex-wrap: wrap; gap: 20px; }
+        h1 { color: #333; }
+      </style>
+    </head>
+    <body>
+      <h1>Project Portfolio</h1>
+      <div class="container">
+        ${projectCards}
+      </div>
+    </body>
+    </html>
+  `;
+
+  res.send(html);
 });
 
 // Start server
